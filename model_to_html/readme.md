@@ -1,13 +1,18 @@
-# ModelToHtml
+# Model To Html
 
-A View mixin to quickly add model fields with labels to a django template (similar to a form "label":"value" output, but just text HTML without the input fields)
+**A View mixin to quickly add model fields with labels to a django template**
+
+The output is similar to a form "label:value" output, but just simple text HTML, without the input fields)
 
 Useful for:
 
 1. Details views
-2. Form views where the form edits only a few fields, yet you want to just show other fields
+2. Form views where the form edits only part of the model's fields, yet you want to show the other fields as text.
 3. Delete views, to show the details of the object to be deleted.
 
+[How To](#how-to)    
+[Style](#style)    
+[Install](#install)    
 
 ## How To
 

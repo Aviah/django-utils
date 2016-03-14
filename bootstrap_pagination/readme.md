@@ -1,9 +1,14 @@
 # Bootstrap Pagination
+**Add bootstrap pagination buttons to a ListView page**
+
+[Overview](#overview)    
+[Install](#install)    
+[Use Pagination](#use-pagination)
 
 
 ## Overview
 
-A simple util that can add bootstrap pagination buttons to any list view.
+A simple util that adds bootstrap pagination buttons to any list view.
 The pagination will work with a GET "page" argument:
 
 	http:/www.example.com/products/?page=1
@@ -18,10 +23,10 @@ The pagination includes 3 files:
 ## Install
 
 
-To use the pagination in your project you will need the bootstrap, see https://getbootstrap.com/components/#pagination
+To use the pagination in your project you will need the bootstrap, see https://getbootstrap.com/components/#pagination.
 
 
-1. Add the **pagination_tags.py** file to one of the application that are listed in INSTALLED_APPS. The file should be in the application `templatetags` directory:
+1. Add the `pagination_tags.py` file to one of the application that are listed in `INSTALLED_APPS`. The file should be in the application `templatetags` directory:
 
 		myapp/
 			migrations
@@ -35,7 +40,7 @@ To use the pagination in your project you will need the bootstrap, see https://g
 			urls.py
 			views.py
 		
-2. Add the **pagination.html** tag to your project main templates directory, where the templates are available to all views, something like:
+2. Add the `pagination.html` tag to your project main templates directory, where the templates are available to all views, something like:
 
 		mysite/
 			myapp1/
@@ -46,7 +51,7 @@ To use the pagination in your project you will need the bootstrap, see https://g
 			settings.py
 			...
 					
-3. Add the **pagination_helpers.py** to the project utils, or the project main directory, so you can import the pagination mixin, something like:
+3. Add the `pagination_helpers.py` to the project utils, or the project main directory, so you can import the pagination mixin, something like:
 
 		from pagination_helpers import PaginationContextMixin
 		
@@ -62,7 +67,7 @@ To use the pagination in your project you will need the bootstrap, see https://g
 
 ### Templates
 
-In any template that requires pagination, add the following code where the pagination buttons should show:
+In any template that requires pagination, add the following code to the place you want the pagination buttons:
 
  	{% if paginate %}   
         {% include "templates/pagination.html" %}        
@@ -86,7 +91,7 @@ In a the list view:
 			return context
 		
 	
-That's it. The list view page will show pagination buttons when the object_list has objects for more than one page.
+That's it. The ListView page will show pagination buttons when the object_list has objects for more than one page.
 	
 
 
